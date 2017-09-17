@@ -1,0 +1,8 @@
+powershell Set-ExecutionPolicy RemoteSigned
+powershell iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+ 
+set PATH=%PATH%;C:\Chocolatey\bin;
+ 
+call cinst .\packages.config
+ 
+pause
